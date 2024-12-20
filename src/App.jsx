@@ -6,7 +6,6 @@ function App() {
   return (
     <>
     <Routers/>
-     <h2>Hello World Ali</h2>
     </>
   )
 }

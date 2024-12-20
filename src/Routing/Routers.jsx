@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Homedash from "../Dashboard/Homedash";
+import Home from "../Components/Home"
 
 
 export default function Routers() {
@@ -7,6 +8,7 @@ export default function Routers() {
    <>
    <Routes>
     <Route path="/dashboard" element={<Homedash/> } />
+    <Route path="/" element={<Home/> } />
    </Routes>
    </>
   )
