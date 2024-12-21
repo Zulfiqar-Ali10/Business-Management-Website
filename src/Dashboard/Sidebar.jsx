@@ -7,7 +7,7 @@ const sidebarItems = [
   { icon: faFolder, label: 'Services', active: false },
   { icon: faTasks, label: 'Contact', active: false },
   { icon: faCalendar, label: 'Testimonial', active: false },
-  { icon: faChartPie, label: 'Reports', active: false },
+  { icon: faChartPie, label: 'Footer', active: false },
 ];
 
 const settingsItems = [
