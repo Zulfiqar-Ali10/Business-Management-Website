@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -18,21 +19,21 @@ export default function Header() {
           {/* ***** Menu Start ***** */}
           <ul className="nav">
             <li className="scroll-to-section">
-              <a href="#top" className="active">
+              <Link to="/" className="active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="scroll-to-section">
-              <a href="#services">Services</a>
+              <Link to="/services">Services</Link>
             </li>
             <li className="scroll-to-section">
-              <a href="#about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li className="has-sub">
               <a href="javascript:void(0)">Pages</a>
               <ul className="sub-menu">
                 <li>
-                  <a href="about-us.html">About Us</a>
+                  <a href="#about">About Us</a>
                 </li>
                 <li>
                   <a href="our-services.html">Our Services</a>
@@ -43,7 +44,7 @@ export default function Header() {
               </ul>
             </li>
             <li className="scroll-to-section">
-              <a href="#testimonials">Testimonials</a>
+              <Link to="testimonial">Testimonials</Link>
             </li>
             <li>
               <a href="contact-us.html">Contact Support</a>
