@@ -3,10 +3,10 @@ import { faHome, faChartBar, faFolder, faTasks, faCalendar, faChartPie, faCog, f
 
 const sidebarItems = [
   { icon: faHome, label: 'Dashboard', active: true },
-  { icon: faChartBar, label: 'Analytics', active: false },
-  { icon: faFolder, label: 'Projects', active: false },
-  { icon: faTasks, label: 'Tasks', active: false },
-  { icon: faCalendar, label: 'Calendar', active: false },
+  { icon: faChartBar, label: 'Banner', active: false },
+  { icon: faFolder, label: 'Services', active: false },
+  { icon: faTasks, label: 'Contact', active: false },
+  { icon: faCalendar, label: 'Testimonial', active: false },
   { icon: faChartPie, label: 'Reports', active: false },
 ];
 

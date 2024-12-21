@@ -22,9 +22,9 @@ export default function Navbar() {
               <input
                 type="search"
                 placeholder="Search..."
-                className="w-72 px-4 py-2 pl-10 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="outline-none w-72 px-4 py-2 pl-10 text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <i className="fas fa-search absolute left-3 top-2.5 text-gray-400" />
+              <i className="fas fa-search absolute left-2 top-2.5 text-gray-400" />
             </div>
           </div>
           {/* Notifications */}
@@ -33,14 +33,14 @@ export default function Navbar() {
             <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full" />
           </button>
           {/* Profile */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center  space-x-3">
             <img
               src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff"
               alt="Profile"
               className="w-9 h-9 rounded-xl"
             />
-            <div className="hidden md:block">
-              <p className="text-sm font-medium text-white">John Doe</p>
+            <div className="hidden md:block mt-3">
+              <p className="text-sm font-medium text-white p-0 m-0">John Doe</p>
               <p className="text-xs text-gray-200">Administrator</p>
             </div>
           </div>
