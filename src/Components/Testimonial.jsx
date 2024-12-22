@@ -2,10 +2,17 @@
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { useLocation } from "react-router-dom";
 
 export default function Testimonial() {
+  const location = useLocation(); 
+  const noBgImgRoutes = ["/"];
   return (
-    <section className="testimonials" id="testimonials">
+    <section className="testimonials" id="testimonials" style={
+      noBgImgRoutes.includes(location.pathname) ? {}
+       :
+      {marginTop: "180px" }
+     }>
       <div className="container">
         <div className="row">
           <div className="col-lg-6 offset-lg-3">

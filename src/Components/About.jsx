@@ -1,8 +1,15 @@
+import { useLocation } from "react-router-dom";
 
 export default function About() {
+  const location = useLocation(); 
+  const noBgImgRoutes = ["/"];
   return (
     <>
-    <section className="about-us" id="about">
+    <section className="about-us" id="about" style={
+     noBgImgRoutes.includes(location.pathname) ? {}
+      :
+     {marginTop: "180px" }
+    }>
   <div className="container">
     <div className="row">
       <div className="col-lg-6 offset-lg-3">
