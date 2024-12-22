@@ -55,7 +55,7 @@ export default function Header() {
                     <Link to="/testimonial">Testimonials</Link>
                   </li>
                   <li>
-                    <a href="contact-us.html">Contact Support</a>
+                    <a href="#">Contact Support</a>
                   </li>
                 </ul>
                 <a className="menu-trigger">
