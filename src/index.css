@@ -2,3 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+table, tr, th, td, tbody, thead{
+    border: 2px solid black;
+}
+
+/* Container */
+.table-container {
+    margin: 100px 280px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  /* Add Form */
+  .add-form {
+    margin-bottom: 20px;
+  }
+  
+  .add-form input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-form .btn-add {
+    padding: 10px 15px;
+    margin-left: 5px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Table Styling */
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+  }
+  
+  .btn-save {
+    background-color: #28a745;
+  }
+  

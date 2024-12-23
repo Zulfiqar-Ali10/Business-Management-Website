@@ -138,70 +138,62 @@
 //   );
 // }
 
+import axios from "axios";
+import slide1 from '../assets/images/slide-01.jpg';
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules"; // Import required Swiper modules
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-
-import { useEffect } from 'react';
-import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 export default function Banner() {
-  const slides = [
-    {
-      id: 1,
-      backgroundImage: 'src/assets/images/slide-01.jpg',
-      title: 'Get ready for your business & upgrade all aspects',
-      description:
-        'Mexant HTML5 Template is provided for free of charge. This layout is based on Boostrap 5 CSS framework. Anyone can download and edit for any professional website. Thank you for visiting TemplateMo website.',
-    },
-    {
-      id: 2,
-      backgroundImage: 'src/assets/images/slide-02.jpg',
-      title: 'Digital Currency for you & Best Crypto Tips',
-      description:
-        'You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. It does not ask you anything in return. You have a total freedom to use any template for any purpose.',
-    },
-    {
-      id: 3,
-      backgroundImage: 'src/assets/images/slide-03.jpg',
-      title: 'Best One in Town & Crypto Services',
-      description:
-        'When you browse through different tags on TemplateMo website, you can see a variety of CSS templates which are responsive website designs for different individual needs. Please tell your friends about our website. Thank you.',
-    },
-  ];
+  const [data, setData] = useState([]);
+
+  // Fetch data from the API
+  const fetchBanners = async () => {
+    try {
+      const response = await axios.get(
+        "https://6742d9d9b7464b1c2a62dd44.mockapi.io/bannerApi"
+      );
+      setData(response.data);
+    } catch (error) {
+      console.error("Error fetching banners:", error);
+    }
+  };
 
   useEffect(() => {
-    // Initialize Swiper
-    new Swiper('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+    fetchBanners();
   }, []);
 
   return (
-    <div className="swiper-container" id="top">
-      <div className="swiper-wrapper">
-        {slides.map((slide, index) => (
-          <div className="swiper-slide" key={index}>
+    <div id="top">
+      <Swiper
+        modules={[Navigation, Pagination]}
+        loop={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        pagination={{ clickable: true }}
+        className="swiper-container"
+      >
+        {data.map((slide, index) => (
+          <SwiperSlide key={index}>
             <div
               className="slide-inner"
-              style={{ backgroundImage: `url(${slide.backgroundImage})` }}
+              style={{
+                backgroundImage: `url(${slide1})`,
+              }}
             >
               <div className="container">
                 <div className="row">
                   <div className="col-lg-8">
                     <div className="header-text">
-                      <h2>{slide.title}</h2>
+                      <h2>{slide.heading}</h2>
                       <div className="div-dec" />
-                      <p>{slide.description}</p>
+                      <p>{slide.paragraph}</p>
                       <div className="buttons">
                         <div className="green-button">
                           <a href="#">Discover More</a>
@@ -215,12 +207,9 @@ export default function Banner() {
                 </div>
               </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
-      <div className="swiper-button-next swiper-button-white"></div>
-      <div className="swiper-button-prev swiper-button-white"></div>
-      <div className="swiper-pagination"></div>
+      </Swiper>
     </div>
   );
 }
