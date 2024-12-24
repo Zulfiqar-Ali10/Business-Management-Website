@@ -137,7 +137,7 @@
 // }
 
 import axios from "axios";
-import slide1 from '../assets/images/slide-01.jpg';
+import slide1 from '/src/assets/images/slide-01.jpg';
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules"; // Import required Swiper modules
