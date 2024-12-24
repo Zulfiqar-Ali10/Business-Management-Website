@@ -149,7 +149,7 @@ import "swiper/css/pagination";
 export default function Banner() {
   const [data, setData] = useState([]);
 
-  // Fetch data from the API
+ 
   const fetchBanners = async () => {
     try {
       const response = await axios.get(
