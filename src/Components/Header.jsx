@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-const Img = "./src/assets/images/slide-01.jpg";
+const Img = "src/assets/images/slide-01.jpg";
 
 export default function Header() {
   const location = useLocation(); 
