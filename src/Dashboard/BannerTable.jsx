@@ -71,6 +71,7 @@ export default function BannerTable() {
   const [data, setData] = useState([]);
   const [formData, setFormData] = useState({ heading: "", paragraph: "" });
   const [editId, setEditId] = useState(null); // Track the ID being edited
+  const [loading, setLoading] = useState(true);
 
   // Fetch data from API
   const fetchBanners = async () => {
@@ -80,6 +81,7 @@ export default function BannerTable() {
       );
       // console.log(response.data , "response");
       setData(response.data);
+      setLoading(false)
     } catch (error) {
       console.error("Error fetching banners:", error);
     }
@@ -149,6 +151,9 @@ export default function BannerTable() {
   }, []); // Dependency array to prevent infinite loop
 
   return (
+    <>
+    {loading ?  <div className="loader"></div>
+    : 
     <div className="table-container">
       {/* Add/Edit Form */}
       <div className="add-form">
@@ -216,5 +221,7 @@ export default function BannerTable() {
         </tbody>
       </table>
     </div>
+}
+    </>
   );
 }

@@ -21,11 +21,12 @@ const settingsItems = [
 export default function Sidebar() {
   const navigate = useNavigate();
   return (
+    <>
     <aside  className=" fixed top-16 left-0 w-64 h-[calc(100vh-4rem)] bg-blue-950 border-r border-gray-200 ">
       <div className="p-4">
         <nav className="space-y-1">
           {sidebarItems.map((item, index) => (
-            <p onClick={()=> navigate(`${item.link}`)}
+            <p onClick={ () => navigate(`${item.link}`)}
               key={index}
               href=""
               className={`flex items-center px-3 py-2.5 text-sm font-medium ${
@@ -59,6 +60,7 @@ export default function Sidebar() {
         </div>
       </div>
     </aside>
+    </>
   );
 }
 
