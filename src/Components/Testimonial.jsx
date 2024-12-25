@@ -86,6 +86,8 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { useLocation } from "react-router-dom";
 
+const Img4 = "/src/assets/images/testimonials-01.jpg"
+
 export default function Testimonial() {
   const location = useLocation(); 
   const noBgImgRoutes = ["/"];
@@ -97,21 +99,21 @@ export default function Testimonial() {
       quote: "Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.",
       name: "David Eigenberg",
       designation: "CEO of Mexant",
-      image: "/src/assets/images/testimonials-01.jpg",
+      image: Img4,
     },
     {
       id: 2,
       quote: "Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.",
       name: "Andrew Garfield",
       designation: "CTO of Mexant",
-      image: "/src/assets/images/testimonials-01.jpg",
+      image: Img4,
     },
     {
       id: 3,
       quote: "Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.",
       name: "George Lopez",
       designation: "Crypto Manager",
-      image: "/src/assets/images/testimonials-01.jpg",
+      image: Img4,
     },
   ];
 

@@ -1,5 +1,5 @@
 
-
+const Img3 = "/src/assets/images/calculator-image.png"
 export default function Contact() {
   return (
     <>
@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="row">
       <div className="col-lg-7">
         <div className="left-image">
-          <img src="/src/assets/images/calculator-image.png" alt="" />
+          <img src={Img3} alt="" />
         </div>
       </div>
       <div className="col-lg-5">
