@@ -69,6 +69,7 @@ export default function BannerTable() {
       fetchBanners(); // Refresh data
     } catch (error) {
       console.error("Error updating banner:", error);
+      toast.error("Data Not update")
     }
   };
 
