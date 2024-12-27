@@ -83,6 +83,7 @@ export default function BannerTable() {
       fetchBanners(); // Refresh data
     } catch (error) {
       console.error("Error deleting banner:", error);
+      toast.error("Data Not delete")
     }
   };
 
