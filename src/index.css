@@ -6,14 +6,14 @@ table, tr, th, td{
     border: 2px solid black;
 }
 
-/* Container */
+
 .table-container {
     margin: 100px 280px;
     width: 80%;
     text-align: center;
   }
   
-  /* Add Form */
+
   .add-form {
     margin-bottom: 20px;
   }
@@ -35,7 +35,7 @@ table, tr, th, td{
     cursor: pointer;
   }
   
-  /* Table Styling */
+
   .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -67,7 +67,6 @@ table, tr, th, td{
     background-color: #f1f1f1;
   }
   
-  /* Buttons */
   .btn {
     padding: 5px 10px;
     margin: 0 5px;
@@ -90,7 +89,6 @@ table, tr, th, td{
   }
   
 
-  /* ///////////////////////////// */
 
   .loader {
     border: 16px solid #f3f3f3;
@@ -116,4 +114,4 @@ table, tr, th, td{
     100% { transform: rotate(360deg); }
   }
   
-  /* ///////////////////////////// */
+  

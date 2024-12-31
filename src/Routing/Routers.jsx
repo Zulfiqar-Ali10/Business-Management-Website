@@ -5,6 +5,7 @@ import ServicesPage from "../Pages/servicesPage";
 import AboutPage from "../Pages/aboutPage";
 import TestimonialPage from "../Pages/testimonialPage";
 import DashBanner from "../DashPages.jsx/DashBanner";
+import DashTestimonial from "../DashPages.jsx/DashTestimonial";
 
 
 export default function Routers() {
@@ -17,6 +18,7 @@ export default function Routers() {
     <Route path="/about" element={<AboutPage/> } />
     <Route path="/testimonial" element={<TestimonialPage/> } />
     <Route path="/dashbanner" element={<DashBanner/> } />
+    <Route path="/dashtestimonial" element={<DashTestimonial/> } />
    </Routes>
    </>
   )

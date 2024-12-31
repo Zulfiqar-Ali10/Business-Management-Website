@@ -8,7 +8,7 @@ const sidebarItems = [
   { icon: faChartBar, label: 'Banner', active: false, link: "/dashbanner" },
   { icon: faFolder, label: 'Services', active: false },
   { icon: faTasks, label: 'Contact', active: false },
-  { icon: faCalendar, label: 'Testimonial', active: false },
+  { icon: faCalendar, label: 'Testimonial', active: false , link: "/dashtestimonial"},
   { icon: faChartPie, label: 'Footer', active: false },
 ];
 
