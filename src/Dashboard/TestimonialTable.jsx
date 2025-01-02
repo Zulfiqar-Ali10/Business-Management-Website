@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export default function TestimonialTabel() {
   const [data, setData] = useState([]);
   const [formData, setFormData] = useState({ quote: "", name: "", designation: "" });
-  const [editId, setEditId] = useState(null); // Track the ID being edited
+  const [editId, setEditId] = useState(null); 
   const [loading, setLoading] = useState(false);
 
   // Fetch data from API
