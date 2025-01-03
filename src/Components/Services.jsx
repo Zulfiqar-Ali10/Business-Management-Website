@@ -19,7 +19,7 @@ export default function Services() {
           <h4>CSS Templates</h4>
           <p>
             TemplateMo website is the best for you to explore and download free
-            website templates website jksjka kjsak sahjahsjahsjahs sajh djshjshdjs sdjhsjd lkjsdkjsdksjkjdks.
+            website templates websites.
           </p>
         </div>
       </div>
