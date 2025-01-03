@@ -9,7 +9,7 @@ const sidebarItems = [
   { icon: faFolder, label: 'Services', active: false,  link: "/dashServices" },
   { icon: faTasks, label: 'Contact', active: false,  link: "/dashContact" },
   { icon: faCalendar, label: 'Testimonial', active: false , link: "/dashtestimonial"},
-  { icon: faChartPie, label: 'Footer', active: false,  link: "/dashFooter" },
+  { icon: faChartPie, label: 'Footer', active: false, },
 ];
 
 const settingsItems = [
