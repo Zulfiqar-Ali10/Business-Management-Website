@@ -43,7 +43,7 @@ export default function Testimonial() {
       const response = await axios.get(
         "https://6773d23c77a26d4701c67010.mockapi.io/testimonial"
       );
-      console.log(response.data , "response");
+      // console.log(response.data , "response");
       setData(response.data);
     } catch (error) {
       console.error("Error fetching Testimonial:", error);
