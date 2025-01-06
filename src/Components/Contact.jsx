@@ -72,9 +72,9 @@ export default function Contact() {
                   <option type="checkbox" name="option1" value="Online Banking">
                     Online Banking
                   </option>
-                  <option value="Financial Control">Financial Control</option>
-                  <option value="Yearly Profit">Yearly Profit</option>
-                  <option value="Crypto Investment">Crypto Investment</option>
+                  <option value="Financial Control">Financial Controls</option>
+                  <option value="Yearly Profit">Yearly Profits</option>
+                  <option value="Crypto Investment">Crypto Investments</option>
                 </select>
               </fieldset>
             </div>
