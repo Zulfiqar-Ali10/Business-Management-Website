@@ -154,7 +154,7 @@ export default function BannerTable() {
                   className="btn btn-delete"
                   onClick={() => deleteBanner(item.id)}
                 >
-                  Delete
+                  Deletedbtn yes
                 </button>
               </td>
             </tr>
