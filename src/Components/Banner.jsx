@@ -37,7 +37,7 @@ export default function Banner() {
           prevEl: ".swiper-button-prev",
         }}
         arrows={true}
-        navigation={true}
+        // navigation={true}
         pagination={{ clickable: true }}
         className="swiper-container"
       >
