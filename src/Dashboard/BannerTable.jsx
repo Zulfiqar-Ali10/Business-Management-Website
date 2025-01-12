@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 export default function BannerTable() {
   const [data, setData] = useState([]);
-  const [formData, setFormData] = useState({ heading: "", paragraph: "" });
+  const [formData, setFormData] = useState({ heading: "", paragraphy: "" });
   const [editId, setEditId] = useState(null); // Track the ID being edited
   const [loading, setLoading] = useState(true);
 
@@ -12,10 +12,10 @@ export default function BannerTable() {
   const fetchBanners = async () => {
     try {
       const response = await axios.get(
-        "https://6742d9d9b7464b1c2a62dd44.mockapi.io/bannerApi"
+        "https://crud-api-vp6e.vercel.app/banner"
       );
-      // console.log(response.data , "response");
-      setData(response.data);
+      console.log(response.data.data , "response");
+      setData(response.data.data);
       setLoading(false)
     } catch (error) {
       console.error("Error fetching banners:", error);
@@ -30,7 +30,7 @@ export default function BannerTable() {
 
   // Add a new banner (POST)
   const addBanner = async () => {
-    if (!formData.heading || !formData.paragraph) {
+    if (!formData.heading || !formData.paragraphy) {
       alert("Please fill out both fields before adding.");
       return;
     }
@@ -38,12 +38,12 @@ export default function BannerTable() {
     
     try {
       await axios.post(
-        "https://6742d9d9b7464b1c2a62dd44.mockapi.io/bannerApi",
+        "https://crud-api-vp6e.vercel.app/banner",
         formData
       );
       toast.success("Data post Successfully")
       console.log(formData , "formData");
-      setFormData({ heading: "", paragraph: "" }); // Reset form
+      setFormData({ heading: "", paragraphy: "" }); // Reset form
       fetchBanners(); // Refresh data
     } catch (error) {
       console.error("Error adding banner:", error);
@@ -53,18 +53,18 @@ export default function BannerTable() {
 
   // Update an existing banner (PUT)
   const updateBanner = async () => {
-    if (!formData.heading || !formData.paragraph) {
+    if (!formData.heading || !formData.paragraphy) {
       alert("Please fill out both fields before updating.");
       return;
     }
 
     try {
       await axios.put(
-        `https://6742d9d9b7464b1c2a62dd44.mockapi.io/bannerApi/${editId}`,
+        `https://crud-api-vp6e.vercel.app/banner/${editId}`,
         formData
       );
       toast.success("Data Update Successfully")
-      setFormData({ heading: "", paragraph: "" }); // Reset form
+      setFormData({ heading: "", paragraphy: "" }); // Reset form
       setEditId(null); // Exit edit mode
       fetchBanners(); // Refresh data
     } catch (error) {
@@ -74,10 +74,10 @@ export default function BannerTable() {
   };
 
   // Delete a banner
-  const deleteBanner = async (id) => {
+  const deleteBanner = async (_id) => {
     try {
       await axios.delete(
-        `https://6742d9d9b7464b1c2a62dd44.mockapi.io/bannerApi/${id}`
+        `https://crud-api-vp6e.vercel.app/banner/${_id}`
       );
       toast.success("Data delete Successfully")
       fetchBanners(); // Refresh data
@@ -109,8 +109,8 @@ export default function BannerTable() {
         <input
           type="text"
           placeholder="Enter Paragraph"
-          name="paragraph"
-          value={formData.paragraph}
+          name="paragraphy"
+          value={formData.paragraphy}
           onChange={handleInput}
         />
         <button
@@ -134,17 +134,17 @@ export default function BannerTable() {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td>{item.id}</td>
+              <td>{index}</td>
               <td>{item.heading}</td>
-              <td>{item.paragraph}</td>
+              <td>{item.paragraphy}</td>
               <td>
                 <button
                   className="btn btn-edit"
                   onClick={() => {
-                    setEditId(item.id); // Set current ID for editing
+                    setEditId(item._id); // Set current ID for editing
                     setFormData({
                       heading: item.heading,
-                      paragraph: item.paragraph,
+                      paragraphy: item.paragraphy,
                     });
                   }}
                 >
@@ -152,7 +152,7 @@ export default function BannerTable() {
                 </button>
                 <button
                   className="btn btn-delete"
-                  onClick={() => deleteBanner(item.id)}
+                  onClick={() => deleteBanner(item._id)}
                 >
                   Delete
                 </button>

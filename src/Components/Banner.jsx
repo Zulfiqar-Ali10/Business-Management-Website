@@ -14,8 +14,8 @@ export default function Banner() {
  
   const fetchBanners = async () => {
     try {
-      // const response = await axios.get("https://crud-api-vp6e.vercel.app/banner" );
-      const response = await axios.get("http://localhost:5000/banner" );
+      const response = await axios.get("https://crud-api-vp6e.vercel.app/banner" );
+      // const response = await axios.get("http://localhost:5000/banner" );
       console.log("response data Here => ", response.data.data)
       setData(response.data.data);
     } catch (error) {
@@ -32,10 +32,10 @@ export default function Banner() {
       <Swiper
         modules={[Navigation, Pagination]}
         loop={true}
-        // navigation={{
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         arrows={true}
         navigation={true}
         pagination={{ clickable: true }}
