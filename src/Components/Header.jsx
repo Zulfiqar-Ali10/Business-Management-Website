@@ -22,7 +22,8 @@ export default function Header() {
               <nav className="main-nav">
                 {/* ***** Logo Start ***** */}
                 <a href="index.html" className="logo">
-                  <img src={Img2} alt="" />
+                  {/* <img src={Img2} alt="" /> */}
+                  <img src="src/assets/images/logo.png" alt="" />
                 </a>
                 {/* ***** Logo End ***** */}
                 {/* ***** Menu Start ***** */}
