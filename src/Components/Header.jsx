@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 const Img = "/src/assets/images/slide-01.jpg";
-// const Img2 = "/src/assets/images/logo.png"
+const Img2 = "/src/assets/images/logo.png"
 
 export default function Header() {
   const location = useLocation(); 
@@ -22,8 +22,8 @@ export default function Header() {
               <nav className="main-nav">
                 {/* ***** Logo Start ***** */}
                 <a href="index.html" className="logo">
-                  {/* <img src={Img2} alt="" /> */}
-                  <img src="/src/assets/images/logo.png" alt="" />
+                  <img src={Img2} alt="" />
+                  {/* <img src="/src/assets/images/logo.png" alt="" /> */}
                 </a>
                 {/* ***** Logo End ***** */}
                 {/* ***** Menu Start ***** */}
