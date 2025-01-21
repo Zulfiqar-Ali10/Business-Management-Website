@@ -61,7 +61,7 @@ export default function Banner() {
                           <a href="#">Discover More</a>
                         </div>
                         <div className="orange-button">
-                          <a href="#">Contact Us and why contact dear</a>
+                          <a href="#">Contact Us</a>
                         </div>
                       </div>
                     </div>
