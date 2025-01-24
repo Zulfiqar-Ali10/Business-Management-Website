@@ -58,7 +58,7 @@ export default function Banner() {
                       <p>{slide.paragraphy}</p>
                       <div className="buttons">
                         <div className="green-button">
-                          <a href="#">Discover More and moe</a>
+                          <a href="#">Discover More and more and</a>
                         </div>
                         <div className="orange-button">
                           <a href="#">Contact Us</a>
